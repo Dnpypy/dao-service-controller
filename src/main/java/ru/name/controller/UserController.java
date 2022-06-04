@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 
     @GetMapping("/hello")
-    public String getName(){
-        return "hello!";
+    public String hello(){
+        return "hello";
     }
 }
