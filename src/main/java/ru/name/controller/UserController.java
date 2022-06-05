@@ -48,6 +48,12 @@ public class UserController {
         return "redirect:/users";
     }
 
+    @PostMapping("/updateUser")
+    public String updateUser(@ModelAttribute("user") User user){
+        userService.update(user);
+        return "redirect:/user/" + user.getId();
+    }
+
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") int id){
         userService.getById(id);
