@@ -37,7 +37,7 @@ public class UserController {
         return "showUser";
     }
 
-    @GetMapping()
+    @GetMapping("/addUser")
     public String createUserPage(){
         return "createUser";
     }
