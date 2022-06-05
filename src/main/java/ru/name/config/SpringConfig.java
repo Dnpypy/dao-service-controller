@@ -5,6 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import ru.name.dao.UserDao;
+import ru.name.dao.UserDaoImpl;
 
 import javax.sql.DataSource;
 
@@ -12,7 +14,7 @@ import javax.sql.DataSource;
 public class SpringConfig {
 
     @Bean
-    public JdbcTemplate getJdbcTemplate(){
+    public JdbcTemplate getJdbcTemplate() {
         return new JdbcTemplate(getDataSource());
     }
 
@@ -24,5 +26,10 @@ public class SpringConfig {
         dataSource.setPassword("1234");
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         return dataSource;
+    }
+
+    @Bean
+    public UserDao getUserDao() {
+        return new UserDaoImpl(getJdbcTemplate());
     }
 }
