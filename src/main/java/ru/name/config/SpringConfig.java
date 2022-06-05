@@ -7,6 +7,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import ru.name.dao.UserDao;
 import ru.name.dao.UserDaoImpl;
+import ru.name.service.UserService;
+import ru.name.service.UserServiceImpl;
 
 import javax.sql.DataSource;
 
@@ -31,5 +33,10 @@ public class SpringConfig {
     @Bean
     public UserDao getUserDao() {
         return new UserDaoImpl(getJdbcTemplate());
+    }
+
+    @Bean
+    public UserService getUserService(){
+        return new UserServiceImpl();
     }
 }
