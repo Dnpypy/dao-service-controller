@@ -23,4 +23,9 @@ public class UserController {
     public String hello(){
         return "hello";
     }
+
+    @GetMapping("/users")
+    public String getAllUsers(){
+        return "usersList";
+    }
 }
