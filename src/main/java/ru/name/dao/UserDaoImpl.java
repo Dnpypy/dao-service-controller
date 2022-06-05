@@ -30,9 +30,11 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void delete(int id) {
-        String sql = "DELETE * FROM user WHERE id=?";
+        String sql = "DELETE FROM user WHERE id=?";
         jdbcTemplate.update(sql, id);
     }
+
+
     @Override
     public void update(User user) {
         String sql = "UPDATE user SET name=?, email=?, age=? WHERE id=?";
