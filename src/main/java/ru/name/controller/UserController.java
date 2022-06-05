@@ -37,6 +37,11 @@ public class UserController {
         return "showUser";
     }
 
+    @GetMapping()
+    public String createUserPage(){
+        return "createUser";
+    }
+
     @PostMapping("/addUser")
     public String addUser(@ModelAttribute("user") User user){
         userService.save(user);
