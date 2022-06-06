@@ -2,11 +2,13 @@ package ru.name.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 import ru.name.entity.User;
 import ru.name.mapper.UserMapper;
 
 import java.util.List;
 
+@Repository
 public class UserDaoImpl implements UserDao {
 
     @Autowired
