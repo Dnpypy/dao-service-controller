@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
-<body>
-<h1>Users list</h1>
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Age</th>
-    </tr>
+<body class="container">
+<#include "templates/header.ftl">
+<div class="table-responsive">
+    <caption>User info</caption>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
         <#list users as user>
             <tr>
                 <td><a href="/user/${user.id}">${user.id}</a></td>
@@ -23,8 +27,9 @@
                 <td><a href="/update/${user.id}">Update</a></td>
             </tr>
         </#list>
-</table>
 
-<a href="/addUser">Create User</a>
+    </table>
+    <a type="button" href="/addUser" class="button">Create User</a>
+</div>
 </body>
 </html>
