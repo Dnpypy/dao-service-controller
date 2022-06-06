@@ -14,7 +14,10 @@ public class UserServiceImpl implements UserService{
     UserDao userDao;
 
     @Override
-    public void save(User user) {
+    public void save(User user) throws Exception {
+        if(user.getName().length() < 2) {
+            throw  new Exception();
+        }
         userDao.save(user);
     }
 

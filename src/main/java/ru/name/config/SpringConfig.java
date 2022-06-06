@@ -6,10 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import ru.name.dao.UserDao;
-import ru.name.dao.UserDaoImpl;
-import ru.name.service.UserService;
-import ru.name.service.UserServiceImpl;
 
 import javax.sql.DataSource;
 
