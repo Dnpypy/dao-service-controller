@@ -16,6 +16,18 @@
 
 *Верстка FreeMaker template для отображения данных.*
 
+### Запуск приложения
+
+```
+Включите терминал(CLI) в вашем редакторе
+Введите команду mvn clean package
+Далее два варианта:
+1)Положите созданный war-файл в папку webapps с вашим tomcat
+2)Создайте локальный сервер tomcat (Edit Configuration -> Tomcat Server -> Local)
+Запуск сервера
+Перейдите в вашем браузере по адресу http://localhost:8080
+
+```
 ### Стек технологий:
 
 *Spring MVC, Spring JDBC, Maven, Tomcat, MySQL*
